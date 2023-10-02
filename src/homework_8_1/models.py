@@ -1,5 +1,5 @@
 import registrator.registrator as registrator
-from datetime import datetime
+# from datetime import datetime
 
 from mongoengine import EmbeddedDocument, Document, CASCADE
 from mongoengine.fields import  DateField,\

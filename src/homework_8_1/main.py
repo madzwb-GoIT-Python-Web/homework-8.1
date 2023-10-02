@@ -1,9 +1,9 @@
 import pprint
 from pathlib import Path
 
-import argparser as ap
-import connection
-import seed
+import homework_8_1.argparser as ap
+import homework_8_1.connection as connection
+import homework_8_1.seed as seed
 
 
 def main():

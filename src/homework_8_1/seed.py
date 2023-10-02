@@ -4,7 +4,7 @@ from datetime import datetime
 from pathlib import Path
 
 # import connection
-import models
+import homework_8_1.models as models
 
 def seed(path: Path):
     filename = path / "authors.json"

@@ -1,10 +1,11 @@
 import argparse
 
-import models
-
 from mongoengine import ListField, ReferenceField, EmbeddedDocumentField, Document, EmbeddedDocument
 from mongoengine.queryset import QuerySet
 from pathlib import Path
+
+import homework_8_1.models as models
+
 
 
 parser = None
