@@ -11,7 +11,7 @@ authors = [
 ]
 description = "homework-8.1"
 readme = "README.md"
-requires-python = "==3.11"
+requires-python = "==3.11.5"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
@@ -27,7 +27,7 @@ dependencies = [
 ]
 
 [project.scripts]
-main = "main:main"
+homework_8_1 = "main:main"
 
 # [project.entry-points]
 # sorter = {sorter = "filesorter.sorter"}
@@ -44,9 +44,11 @@ version_scheme = "release-branch-semver"
 # "dirty-tag" "node-and-date" "node-and-timestamp"
 local_scheme =  "no-local-version"
 
-[tool.setuptools]
-include-package-data = true
-# packages = ["filesorter"]
+# [tool.setuptools]
+# include-package-data = true
+# # packages = ["homework-8"]
 
+[tool.setuptools.package-data]
+"*" = ["*.*"]
 # [tool.setuptools.packages.find]
-# where = ["data"]
+# where = ["src"]
