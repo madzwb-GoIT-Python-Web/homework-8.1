@@ -27,7 +27,7 @@ dependencies = [
 ]
 
 [project.scripts]
-homework_8_1 = "main:main"
+homework_8_1 = "homework_8_1.main:main"
 
 # [project.entry-points]
 # sorter = {sorter = "filesorter.sorter"}
