@@ -4,6 +4,9 @@ import models
 
 from mongoengine import ListField, ReferenceField, EmbeddedDocumentField, Document, EmbeddedDocument
 from mongoengine.queryset import QuerySet
+from pathlib import Path
+
+
 parser = None
 subparsers = None
 commands = {}
@@ -22,15 +25,15 @@ def create_parser():
         # epilog = "HELP:\n\
     )
 
-    # parser.add_argument(
-    #     "-c --connect --url",
-    #     help = "Specify URL.",
-    #     type = str,
-    #     metavar = "url",
-    #     dest = "url",
-    #     default = "postgresql+psycopg2://postgres:postgres@localhost:5432/postgres",
-    #     required=False
-    # )
+    parser.add_argument(
+        "-d --data",
+        help = "Specify data path.",
+        type = Path,
+        metavar = "data",
+        dest = "data",
+        default = "data",
+        required=False
+    )
 
     """Internal commands' parser"""
     subparsers = parser.add_subparsers(dest = "command")

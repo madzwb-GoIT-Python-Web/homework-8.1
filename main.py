@@ -7,8 +7,12 @@ import seed
 
 
 def main():
-    seed.seed(Path.cwd() / "data")
     parser = ap.create_parser()
+    args = parser.parse_args()
+    data = args.data
+    if not data.exists():
+        data = Path.cwd() / args.data
+    seed.seed(data)
     while True:
         command = input('>')
         commands = ap.parse_command(command)
