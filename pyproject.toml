@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=68.0", "setuptools_scm[toml]>=7.1.0"]
+requires = ["setuptools>=68.0", "setuptools_scm[toml]>=8.0.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -11,7 +11,7 @@ authors = [
 ]
 description = "homework-8.1"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = "==3.11"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
@@ -19,8 +19,8 @@ classifiers = [
 ]
 
 dependencies = [
-  "dnspython==2.4.2",
-  "pymongo==4.5.0",
+  # "dnspython==2.4.2",
+  # "pymongo==4.5.0",
   "mongoengine==0.27.0",
   "python-dotenv==1.0.0",
   "registrator@git+https://www.github.com/madzwb/registrator@0.3.0",

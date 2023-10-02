@@ -4,6 +4,8 @@
 #
 #    pip-compile pyproject.toml
 #
+python-dotenv==1.0.0
+    # via homework-8.1 (pyproject.toml)
 dnspython==2.4.2
     # via
     #   homework-8.1 (pyproject.toml)
