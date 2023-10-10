@@ -7,7 +7,7 @@ from mongoengine import connect
 
 load_dotenv()
 secret_file = os.environ.get("MONGODB_PASSWORD_FILE")
-if not os.path.exists(secret_file):
+if secret_file and not os.path.exists(secret_file):
     secret_file = os.path.join(os.getcwd(), secret_file)
 if secret_file:
     with open(secret_file, 'r') as fd:
