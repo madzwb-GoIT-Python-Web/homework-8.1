@@ -17,7 +17,7 @@ def seed(path: Path):
                 value = datetime.strptime(value, "%B %d, %Y").date()
             author_data[key] = value
         uniques = [k for k, v in models.Author._fields.items() if v.unique]
-        params = {u: data[u] for u in uniques}
+        params = {u: data[u] for u in uniques if u in data}
         if not (author := models.Author.objects(**params).first()):
             author = models.Author(**author_data)
         else:
@@ -36,7 +36,7 @@ def seed(path: Path):
         datas = json.load(fd)
     for data in datas:
         uniques = [k for k, v in models.Quote._fields.items() if v.unique]
-        params = {u: data[u] for u in uniques}
+        params = {u: data[u] for u in uniques if u in data}
         quote = models.Quote.objects(**params).first()
         quote_data = {}
         for key, value in data.items():
